@@ -1,0 +1,10 @@
+---
+layout: default
+title: Hank Quinlan's Blog
+---
+<h1>{{ page.title }}</h1>
+<ul class="posts">
+    {% for annot in site.annotations %}
+        <li><a href="{{ annot.url }}" title="{{ annot.title }}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
