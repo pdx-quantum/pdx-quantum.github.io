@@ -1,9 +1,11 @@
 ---
+title: A Title
 author: An Author
 abbrev: Abbr
-pdf: foo
-bibtex: bar
-year: blah
+wherepublished: A journal
+year: 1999
 ---
+
+Some stuff with `markdown`.
 
 $$\sum_{x=1}^k\alpha_x$$
