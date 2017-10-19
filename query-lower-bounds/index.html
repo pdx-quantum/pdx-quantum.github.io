@@ -1,0 +1,11 @@
+---
+layout: default
+title: Quantum Query Lower Bounds
+---
+<h1>{{ page.title }}</h1>
+
+<ul>
+    {% for entry in site.bibentries %}
+        <li>[{{ entry.name }}]</li>] "{{ entry.title }}." {{ entry.author }}. {{ entry.year }}. [<a href="{{ entry.pdf }}">pdf</a>] [<a href="{{ entry.bibtex }}">bibtex</a>] [<a href="{{ entry.url }}">annotation</a>]</li>
+    {% endfor %}
+</ul>
