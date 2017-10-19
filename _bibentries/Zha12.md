@@ -30,7 +30,3 @@ separation: under the assumption that standard-secure pseudorandom functions
 exist, there are pseudorandom functions secure against quantum adversaries
 making classical queries, but insecure once the adversary can make quantum
 queries.
-
-$$\sum_{x=1}^k\alpha_x$$
-
-Some stuff with `markdown`.
