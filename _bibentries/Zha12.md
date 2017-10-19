@@ -4,6 +4,7 @@ author: Mark Zhandry
 year: 2012
 pdf: "https://eprint.iacr.org/2012/182.pdf"
 bibtex: "https://eprint.iacr.org/eprint-bin/cite.pl?entry=2012/182"
+abbrev: Zha12
 layout: bibentry
 ---
 
