@@ -7,8 +7,6 @@ year: 1999
 abbrev: MJ
 ---
 
-<div>
 $$\sum_{x=1}^k\alpha_x$$
-</div>
 
 Some stuff with `markdown`.
