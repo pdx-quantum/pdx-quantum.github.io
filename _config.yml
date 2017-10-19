@@ -1,7 +1,9 @@
 name: PDX Quantum Computing Reading Group
 markdown: kramdown
+
 collections:
     bibentries:
-        layout: bibentry
         output: true
         permalink: /:collection/:name
+        values:
+            layout: bibentry
