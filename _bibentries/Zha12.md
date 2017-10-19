@@ -5,6 +5,7 @@ year: 2012
 pdf: "https://eprint.iacr.org/2012/182.pdf"
 bibtex: "https://eprint.iacr.org/eprint-bin/cite.pl?entry=2012/182"
 abbrev: Zha12
+layout: bibentry
 ---
 
 In the presence of a quantum adversary, there are two possible definitions of
@@ -29,3 +30,7 @@ separation: under the assumption that standard-secure pseudorandom functions
 exist, there are pseudorandom functions secure against quantum adversaries
 making classical queries, but insecure once the adversary can make quantum
 queries.
+
+$$\sum_{x=1}^k\alpha_x$$
+
+Some stuff with `markdown`.
