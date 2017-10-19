@@ -7,3 +7,5 @@ collections:
         permalink: /:collection/:name
         values:
             layout: bibentry
+
+theme: jekyll-theme-minimal
