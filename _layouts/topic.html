@@ -8,8 +8,8 @@ layout: default
 </div>
 
 test<br/>
-{% for entry in entry.url %} {{ entry.url }} {% endfor %}<br/>
-{{ page.name }}<br/>
+{% for entry in site.bibentries %} {{ entry.url }} {% endfor %}<br/>
+{{ page.path }}<br/>
 /test
 
 <ul>
