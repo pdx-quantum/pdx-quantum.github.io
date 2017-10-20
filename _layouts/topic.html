@@ -7,6 +7,11 @@ layout: default
     {{ content }}
 </div>
 
+test<br/>
+{% for entry in entry.url %} {{ entry.url }} {% endfor %}<br/>
+{{ page.name }}<br/>
+/test
+
 <ul>
     {% for entry in site.bibentries | where_exp:"entry", "entry.url contains page.name" | where_exp:"entry", "entry.abbrev && entry.title && entry.author && entry.year" %}
         <li><span class="reference">
