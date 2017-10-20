@@ -5,12 +5,14 @@ collections:
     bibentries:
         output: true
         permalink: /:collection/:name
-        values:
-            layout: bibentry
+        defaults:
+            values:
+                layout: bibentry
     topics:
         output: true
         permalink: /:name
-        values:
-            layout: topic
+        defaults:
+            values:
+                layout: topic
 
 theme: jekyll-theme-minimal
