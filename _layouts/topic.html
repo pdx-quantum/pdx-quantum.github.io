@@ -7,13 +7,14 @@ layout: default
     {{ content }}
 </div>
 
+{% assign name = {{ page.path | remove "_topics/" | remove ".md" | remove ".html" }} %}
 test<br/>
 {% for entry in site.bibentries %} {{ entry.url }} {% endfor %}<br/>
-{{ page.path }}<br/>
+{{ name }}<br/>
 /test
 
 <ul>
-    {% for entry in site.bibentries | where_exp:"entry", "entry.url contains page.name" | where_exp:"entry", "entry.abbrev && entry.title && entry.author && entry.year" %}
+    {% for entry in site.bibentries | where_exp:"entry", "entry.url contains page.name" %}
         <li><span class="reference">
             <b>[{{ entry.abbrev }}]</b>
             "{{ entry.title }}."
