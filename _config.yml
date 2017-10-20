@@ -7,5 +7,10 @@ collections:
         permalink: /:collection/:name
         values:
             layout: bibentry
+    topics:
+        output: true
+        permalink: /:name
+        values:
+            layout: topic
 
 theme: jekyll-theme-minimal
