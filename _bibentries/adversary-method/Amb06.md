@@ -1,11 +1,10 @@
 ---
 title: Polynomial degree vs. quantum query complexity
 author Andris Ambainis
+year: 2006
 wherepublished: Journal of Computer and System Sciences, 72(2): 220-238
 arxiv: "https://arxiv.org/abs/quant-ph/0305028v4"
-year: 2006
 abbrev: Amb06
-layout: bibentry
 ---
 
 The degree of a polynomial representing (or approximating) a function f is a
