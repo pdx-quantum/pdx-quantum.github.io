@@ -15,4 +15,4 @@ collections:
             values:
                 layout: topic
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-slate
