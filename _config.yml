@@ -2,17 +2,22 @@ name: PDX Quantum Computing Reading Group
 markdown: kramdown
 
 collections:
-    bibentries:
-        output: true
-        permalink: /:collection/:name
-        defaults:
-            values:
-                layout: bibentry
-    topics:
-        output: true
-        permalink: /:name
-        defaults:
-            values:
-                layout: topic
+  bibentries:
+    output: true
+    permalink: /:collection/:name
+  topics:
+    output: true
+    permalink: /:name
+defaults:
+  - scope:
+      path: ""
+      type: bibentries
+    values:
+      layout: bibentry
+  - scope:
+      path: ""
+      type: topics
+    values:
+      layout: topic
 
 theme: jekyll-theme-slate
