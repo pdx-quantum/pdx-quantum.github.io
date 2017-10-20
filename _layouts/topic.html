@@ -8,9 +8,7 @@ layout: default
 </div>
 
 <ul>
-    {% for entry in site.bibentries
-      | where_exp:"entry", "entry.path contains page.name"
-      | where_exp:"entry", "entry.abbrev && entry.title && entry.author && entry.year" %}
+    {% for entry in site.bibentries | where_exp:"entry", "entry.path contains page.name" | where_exp:"entry", "entry.abbrev && entry.title && entry.author && entry.year" %}
         <li><span class="reference">
             <b>[{{ entry.abbrev }}]</b>
             "{{ entry.title }}."
