@@ -1,5 +1,6 @@
 ---
 title: Quantum Adversary Method
+bibdir: adversary-method
 ---
 
 In the quantum adversary method, we consider the query complexity of a quantum

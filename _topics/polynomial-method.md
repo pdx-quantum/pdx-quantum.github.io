@@ -1,5 +1,6 @@
 ---
 title: Quantum Polynomial Method
+bibdir: polynomial-method
 ---
 
 In the quantum polynomial method, we consider the query complexity of a boolean

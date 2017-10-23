@@ -1,6 +1,6 @@
 ---
-title: "Polynomial degree vs. quantum query complexity"
-author Andris Ambainis
+title: Polynomial degree vs. quantum query complexity
+author: Andris Ambainis
 year: 2006
 abbrev: Amb06
 wherepublished: "Journal of Computer and System Sciences, 72(2): 220-238"

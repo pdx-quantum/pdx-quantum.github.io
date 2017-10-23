@@ -19,5 +19,3 @@ defaults:
       type: topics
     values:
       layout: topic
-
-theme: jekyll-theme-slate
