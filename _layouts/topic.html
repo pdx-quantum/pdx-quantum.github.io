@@ -7,18 +7,17 @@ layout: default
     {{ content }}
 </div>
 
-{% assign entries = site.bibentries
-    | where_exp: "entry", "entry.path contains page.bibdir"
-    | where_exp: "entry", "entry.title"
-    | where_exp: "entry", "entry.author"
-    | where_exp: "entry", "entry.howpublished"
-    | where_exp: "entry", "entry.year"
-    | where_exp: "entry", "entry.abbrev"
-    | sort: "year"
-%}
+{% assign entries = site.bibentries | sort: "year %}
 <p>{{ name }}</p>
-<ul class="bibentries" >
+<ul class="bibentries">
     {% for entry in entries %}
-        <li>{% include reference.html %}</li>
+        {% if entry.path contains page.bibdir
+          and entry.title
+          and entry.author
+          and entry.howpublished
+          and entry.year
+          and entry.abbrev %}
+            <li>{% include reference.html %}</li>
+        {% endif %}
     {% endfor %}
 </ul>
