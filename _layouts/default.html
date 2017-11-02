@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{ page.title }}</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    
         <link rel="stylesheet" type="text/css" href="/css/main.css">
+        
         <script type="text/x-mathjax-config">
-            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+         MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
         </script>
-        <script type="text/javascript" async src="https://example.com/MathJax.js?config=TeX-AMS_CHTML"></script>
+        <script type="text/javascript" async
+                src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                {% for topic in site.topics %}
-                    <li><a href="{{ topic.url }}">{{ topic.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </nav>
+
+        {% include header.html %}
+
         <div class="container">
-
-        {{ content }}
-
+            {{ content }}
         </div>
-        <footer>
-            <ul>
-                <li><a>version 0.16</a></li>
-                <li><a href="https://github.com/pdx-quantum">github.com/pdx-quantum</a></li>
-            </ul>
-        </footer>
+
+        {% include footer.html %}
+
     </body>
 </html>

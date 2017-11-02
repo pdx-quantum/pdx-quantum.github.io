@@ -2,18 +2,5 @@
 layout: default
 ---
 
-<li><span class="reference">
-    <b>[{{ entry.abbrev }}]</b>
-    "{{ entry.title }}."
-    {{ entry.author }}.
-    {% if entry.wherepublished %}In {{ entry.wherepublished }}.{% endif %}
-    {{ entry.year }}.
-    {% if entry.pdf %}[<a href="{{ entry.pdf }}">pdf</a>]{% endif %}
-    {% if entry.bibtex %}[<a href="{{ entry.bibtex }}">bibtex</a>]{% endif %}
-    {% if entry.arxiv %}[<a href="{{ entry.arxiv }}">arxiv</a>]{% endif %}
-    [<a href="{{ entry.url }}">annotation</a>]
-</span></li>
-
-<div class="annotation">
-    {{ content }}
-</div>
+{% assign entry = page %}
+{% include reference.html show="annot" %}

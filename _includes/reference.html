@@ -1,0 +1,46 @@
+<script>
+    $(document).ready(function(){
+        {% unless include.show == "annot" %}
+            $("div#{{ entry.abbrev | downcase }}-annot").hide()
+            $("a#{{ entry.abbrev | downcase }}-annot").click(function(){
+                $("div#{{ entry.abbrev | downcase }}-annot").slideToggle()
+                $("#{{ entry.abbrev | downcase }}-annot-arrow").toggleClass("arrow-right")
+                $("#{{ entry.abbrev | downcase }}-annot-arrow").toggleClass("arrow-down")
+            })
+        {% endunless %}
+        {% unless include.show == "bibtex" %}
+            $("div#{{ entry.abbrev | downcase }}-bibtex").hide()
+            $("a#{{ entry.abbrev | downcase }}-bibtex").click(function(){
+                $("div#{{ entry.abbrev | downcase }}-bibtex").slideToggle()
+                $("#{{ entry.abbrev | downcase }}-bibtex-arrow").toggleClass("arrow-right")
+                $("#{{ entry.abbrev | downcase }}-bibtex-arrow").toggleClass("arrow-down")
+            })
+        {% endunless %}
+    })
+</script>
+
+<span class="reference">
+    <b>[{{ entry.abbrev | escape }}]</b>
+    "{{ entry.title | escape }}."
+    {{ entry.author | escape }}.
+    In {{ entry.howpublished | escape }}.
+    {{ entry.year | escape }}.
+    {% if entry.pdf %}[<a href="{{ entry.pdf | uri-escape }}">pdf</a>]{% endif %}
+    {% if entry.arxiv %}[<a href="{{ entry.arxiv | uri-escape }}">arxiv</a>]{% endif %}
+    {% unless include.show == "annot" %}[<a id="{{ entry.abbrev | downcase }}-annot"><span id="{{ entry.abbrev | downcase }}-annot-arrow" class="arrow-right"></span>annotation</a>]{% endunless %}
+    {% unless include.show == "bibtex" %}[<a id="{{ entry.abbrev | downcase }}-bibtex"><span id="{{ entry.abbrev | downcase }}-bibtex-arrow" class="arrow-right"></span>bibtex</a>]{% endunless %}
+</span>
+
+<div id="{{ entry.abbrev | downcase }}-annot" class="expand"><p class=annotation>
+    {{ entry.content }}
+</p></div>
+
+<div id="{{ entry.abbrev | downcase }}-bibtex" class="expand">
+    <pre>@misc&#123;{{ entry.abbrev | escape }},
+    author        = &#123;{{ entry.author | escape }}&#125;,
+    title         = &#123;{{ entry.title | escape }}&#125;,
+    howpublished  = &#123;{{ entry.howpublished | escape }}&#125;,
+    year          = &#123;{{ entry.year | escape }}&#125;,{% if entry.arxiv %}
+    url           = &#123;\url&#123;{{ entry.arxiv | url-escape }}&#125;&#125;,{% elsif entry.pdf %}
+    url           = &#123;\url&#123;{{ entry.pdf | url-escape }}&#125;&#125;,{% endif %}
+&#125;</pre></div>
