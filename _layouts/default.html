@@ -2,8 +2,10 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="{{ page.description | default: site.description }}">
+        <meta name="author" content="{{ site.authors }}">
+        <meta name="generator" content="Jekyll v{{ jekyll.version }}">
     
         <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     
@@ -20,13 +22,25 @@
     </head>
     <body>
 
-        {% include header.html %}
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            {% for topic in site.topics %}
+                <li><a href="{{ topic.url }}">{{ topic.title | escape }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
 
         <div class="container">
             {{ content }}
         </div>
 
-        {% include footer.html %}
+    <footer>
+        <ul>
+            <li><a>version 0.17</a></li>
+            <li><a href="https://github.com/pdx-quantum">github.com/pdx-quantum</a></li>
+        </ul>
+    </footer>
 
     </body>
 </html>
